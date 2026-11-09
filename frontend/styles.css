@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h1 {
+  color: #0071ce;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #444;
+}
+
+select, button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+button {
+  background-color: #ffc220;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  padding: 10px 20px;
+  align-self: flex-end;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #e5ad1c;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 18px;
+  color: #0071ce;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #0071ce;
+  color: white;
+  font-weight: 600;
+}
+
+tr.best-model {
+  background-color: #e6f4ea;
+  font-weight: bold;
+}
+
+.recommendation-card {
+  border-left: 5px solid #0071ce;
+}
+
+#recommendationText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+}

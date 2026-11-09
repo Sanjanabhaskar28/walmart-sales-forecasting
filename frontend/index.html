@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walmart Weekly Sales Forecasting Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Walmart Weekly Sales Forecasting Dashboard</h1>
+      <p class="subtitle">Multivariate Time Series Forecasting & Operational Inventory Planning</p>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="storeSelect">Store ID:</label>
+        <select id="storeSelect"></select>
+      </div>
+      <div class="control-group">
+        <label for="deptSelect">Department ID:</label>
+        <select id="deptSelect"></select>
+      </div>
+      <div class="control-group">
+        <label for="modelSelect">Forecasting Model:</label>
+        <select id="modelSelect">
+          <option value="XGBoost">XGBoost Regressor (ML)</option>
+          <option value="Random Forest">Random Forest Regressor (ML)</option>
+          <option value="LSTM Neural Network">LSTM Neural Network (Deep Learning)</option>
+          <option value="SARIMA">SARIMA (Time Series)</option>
+          <option value="Seasonal Naive">Seasonal Naive (Baseline)</option>
+        </select>
+      </div>
+      <button onclick="fetchForecast()">Generate Forecast</button>
+    </div>
+
+    <div class="card">
+      <h2>Model Evaluation Matrix</h2>
+      <table id="metricsTable">
+        <thead>
+          <tr>
+            <th>Model Category / Name</th>
+            <th>MAE ($)</th>
+            <th>RMSE ($)</th>
+            <th>WMAE ($) (Holiday Weighted)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Weekly Sales Forecast vs Actuals</h2>
+      <canvas id="salesChart"></canvas>
+    </div>
+
+    <div class="card recommendation-card">
+      <h2>Inventory Stock Recommendation</h2>
+      <p id="recommendationText">Loading inventory recommendation...</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

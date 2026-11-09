@@ -1,0 +1,27 @@
+{
+    "Seasonal Naive": {
+        "MAE": 14754.95,
+        "RMSE": 19447.87,
+        "WMAE": 14865.71
+    },
+    "Random Forest": {
+        "MAE": 5549.36,
+        "RMSE": 10509.11,
+        "WMAE": 5683.27
+    },
+    "XGBoost": {
+        "MAE": 6121.81,
+        "RMSE": 10375.59,
+        "WMAE": 6293.28
+    },
+    "LSTM Neural Network": {
+        "MAE": 10225.44,
+        "RMSE": 20453.58,
+        "WMAE": 10556.42
+    },
+    "SARIMA": {
+        "MAE": 13982.21,
+        "RMSE": 19178.42,
+        "WMAE": 14091.39
+    }
+}

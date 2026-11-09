@@ -1,0 +1,9 @@
+# Data and binary artifacts
+data/*.csv
+*.zip
+*.pkl
+*.h5
+*.pt
+__pycache__/
+.venv/
+.DS_Store
